@@ -23,7 +23,7 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body class="prose">
+  <body>
     <% if user_signed_in? %>
       <%= link_to "New Blog Post", new_blog_post_path %>
       <%= button_to "Log out", destroy_user_session_path, method: :delete %>
