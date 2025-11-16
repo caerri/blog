@@ -1,5 +1,6 @@
 class BlogPostsController < ApplicationController
-  before_action :set_blog_post, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, except: [:index, :show]
+  before_action :set_blog_post, only: [ :show, :edit, :update, :destroy ]
 
   def index
     @blog_posts = BlogPost.all
@@ -8,7 +9,7 @@ class BlogPostsController < ApplicationController
   def show
   end
 
-  def new 
+  def new
     @blog_post = BlogPost.new
   end
 
@@ -21,7 +22,7 @@ class BlogPostsController < ApplicationController
     end
   end
 
-  def edit 
+  def edit
   end
 
   def update
@@ -49,5 +50,7 @@ class BlogPostsController < ApplicationController
     redirect_to root_path
   end
 
-
+  def authenticate_user
+    redirect_to new_user_session_path, alert: "You must sign in to continue." unless user_signed_in?
+  end
 end
