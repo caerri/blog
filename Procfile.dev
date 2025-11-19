@@ -1,0 +1,4 @@
+web: bin/rails server -p 3010
+# Ensure the Tailwind CSS CLI binary is available at ./tailwindcss.
+# You can download the standalone CLI from https://tailwindcss.com/docs/installation or install via npm: `npm install -D tailwindcss` and use `npx tailwindcss` instead.
+css: ./tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/tailwind.css --watch

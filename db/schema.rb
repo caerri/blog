@@ -10,11 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2025_11_15_233326) do
+ActiveRecord::Schema[8.1].define(version: 2025_11_18_065454) do
   create_table "blog_posts", force: :cascade do |t|
     t.string "author"
     t.text "body"
     t.datetime "created_at", null: false
+    t.datetime "published_at"
     t.string "title"
     t.datetime "updated_at", null: false
   end
