@@ -1,11 +1,11 @@
-<div class="max-w-4xl mx-auto px-4 py-8">
-  <div class="bg-white rounded-lg shadow-md p-8">
-    <div class="flex justify-between items-start mb-8">
-      <h1 class="text-5xl font-bold text-gray-900"><%= @blog_post.title %></h1>
-      <%= link_to "Edit", edit_blog_post_path(@blog_post), class: "px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition" if user_signed_in? %>
+<div>
+  <div>
+    <div>
+      <h1><%= @blog_post.title %></h1>
+      <%= link_to "Edit", edit_blog_post_path(@blog_post) if user_signed_in? %>
     </div>
-    
-    <div class="text-gray-700 leading-relaxed text-lg">
+
+    <div>
       <%= @blog_post.body %>
     </div>
   </div>
