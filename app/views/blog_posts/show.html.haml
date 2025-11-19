@@ -1,0 +1,8 @@
+.show-wrapper
+  .show-blog-title-section
+    .show-title
+      %h1= @blog_post.title
+      = link_to "Edit", edit_blog_post_path(@blog_post) if user_signed_in?
+
+    .show-body
+      = @blog_post.body
