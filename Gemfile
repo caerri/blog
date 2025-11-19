@@ -79,11 +79,6 @@ group :test do
   gem "shoulda-matchers", "~> 6.4.0"
 end
 
-<<<<<<< HEAD
+gem "devise", "~> 4.9"
 gem "haml-rails"
-gem "devise", "~> 4.9"
-=======
-gem "devise", "~> 4.9"
-
 gem "tailwindcss-rails", "~> 4.4"
->>>>>>> dddd03f57045e44acb200e032f443a28630e5762
