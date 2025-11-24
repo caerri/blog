@@ -76,7 +76,7 @@ group :test do
   gem "faker", "~> 3.2"
 
   # Shoulda matchers for model assertions
-  gem "shoulda-matchers", "~> 6.4.0"
+  gem "shoulda-matchers", "~> 7.0.1"
 end
 
 gem "devise", "~> 4.9"
